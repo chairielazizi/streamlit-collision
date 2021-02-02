@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 import pydeck as pdk
 import plotly.express as px
+# from flask import Flask
+# app = Flask(__name__)
+
+# if app == '__main__':
+#     app.run(debug=True)
 
 DATA_URL = ("C:/Users/user/Documents/Coding/Python/StreamlitWebApp/Motor_Vehicle_Collisions_-_Crashes.csv")
 
@@ -12,6 +17,7 @@ DATA_URL = ("C:/Users/user/Documents/Coding/Python/StreamlitWebApp/Motor_Vehicle
 st.title("Motor Vehicles Collision in New York City")
 st.markdown("This application is streamlit dashboard that can be used to analyze motor vehicle collision in NYC")
 
+# @app.route("/").
 @st.cache(persist=True)
 def load_data(rows):
     data = pd.read_csv(DATA_URL, nrows= rows, parse_dates=[['CRASH_DATE', 'CRASH_TIME']])
