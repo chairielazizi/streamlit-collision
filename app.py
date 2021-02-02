@@ -9,7 +9,11 @@ import plotly.express as px
 # if app == '__main__':
 #     app.run(debug=True)
 
-DATA_URL = ("C:/Users/user/Documents/Coding/Python/StreamlitWebApp/Motor_Vehicle_Collisions_-_Crashes.csv")
+
+# DATA_URL = ("C:/Users/user/Documents/Coding/Python/StreamlitWebApp/Motor_Vehicle_Collisions_-_Crashes.csv")
+
+# push to heroku
+DATA_URL = ("https://github.com/chairielazizi/streamlit-collision/blob/master/Motor_Vehicle_Collisions_-_Crashes.csv")
 
 #st.title("Ahoy World!")
 #st.markdown("### My first streamlit dashboard!?")
