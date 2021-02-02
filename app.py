@@ -25,6 +25,7 @@ st.markdown("This application is streamlit dashboard that can be used to analyze
 @st.cache(persist=True)
 def load_data(rows):
     data = pd.read_csv(DATA_URL, nrows= rows, parse_dates=[['CRASH_DATE', 'CRASH_TIME']])
+    # data.seek(0)
     data.dropna(subset =['LATITUDE', 'LONGITUDE'], inplace=True)
     lowercase = lambda x: str(x).lower()
     data.rename(lowercase,axis='columns',inplace=True)
